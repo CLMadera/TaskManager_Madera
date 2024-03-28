@@ -32,7 +32,7 @@ namespace DataAccessLibrary.Repository
         public int Create(TModel model)
         {
             using IDbConnection dbConnection = _dapperContext.CreateConnection();
-            string query = @"INSERT INTO TableName (/* columns */) VALUES (/* values */);
+            string query = @"INSERT INTO TableName (/* columns */) VALUES (/* values */)";
             return dbConnection.Execute(query, model);
         }
 
