@@ -1,7 +1,9 @@
+using Domain.Models;
+
 namespace Application.Services
 {
     public interface IUserAccountService
     {
-        // Metody dotyczące dziedziny konta użytkownika
+        User? Create(string userName, string email, UserRole role, string passwordHash);
     }
 }

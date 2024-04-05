@@ -6,7 +6,7 @@ using DataAccessLibrary.Context;
 
 namespace DataAccessLibrary.Repository
 {
-    public class GenericRepository<TModel> : IGenericRepository<TModel>
+    public class GenericRepository<TModel> : IGenericRepository<TModel>     //to chyba nie jest potrzebne
     {
         private readonly IDapperContext _dapperContext;
 

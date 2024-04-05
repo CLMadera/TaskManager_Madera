@@ -1,4 +1,4 @@
-namespace TaskManager;
+namespace Domain.Models;
 
 public enum TaskItemPriority
 {

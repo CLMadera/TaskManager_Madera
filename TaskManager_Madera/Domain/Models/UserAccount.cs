@@ -1,4 +1,6 @@
-namespace TaskManager;
+using System.ComponentModel.DataAnnotations;
+
+namespace Domain.Models;
 
 /// <summary>
 /// Użytkownik systemu wykorzystywany do uwierzytelniania.
@@ -6,6 +8,7 @@ namespace TaskManager;
 /// </summary>
 public class UserAccount : IUser
 {
+
     public int UserId { get; }
     public string UserName { get; private set; }
     public string Email { get; private set; }
@@ -24,5 +27,19 @@ public class UserAccount : IUser
         CreatedAt = createdAt;
         PasswordHash = passwordHash;
         PasswordLastChangedAt = passwordLastChangedAt;
+    }
+
+
+
+
+
+    public static UserAccount Create(string userName, string email, UserRole role, string passwordHash)
+    {
+        if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(passwordHash) || !email.Contains("@"))
+        {
+            throw new ValidationException();
+        }
+
+        return new UserAccount(0, userName, email, role, DateTime.UtcNow, passwordHash);
     }
 }

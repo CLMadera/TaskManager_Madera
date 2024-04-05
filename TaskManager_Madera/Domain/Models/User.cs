@@ -1,4 +1,4 @@
-namespace TaskManager;
+namespace Domain.Models;
 
 /// <summary>
 /// Model biznesowy użytkownika, po odczycie użytkownika z bazy danych w kontekście zadania, projektu, komentarza.
@@ -6,7 +6,7 @@ namespace TaskManager;
 public class User : IUser
 {
     public int UserId { get; }
-    public string UserName { get; private set; }
+    public string UserName { get; private set; }//to login
     public string Email { get; private set; }
     public UserRole Role { get; }
 
