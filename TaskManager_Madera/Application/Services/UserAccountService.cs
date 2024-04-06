@@ -11,9 +11,8 @@ namespace Application.Services
     public class UserAccountService : IUserAccountService
     {
 
-        private readonly IGenericRepository<IUser> _repository;
-       
-        public UserAccountService(IGenericRepository<IUser>  repository)
+        private readonly IUserRepository _repository;
+        public UserAccountService(IUserRepository repository)
         {
             _repository = repository;
         }

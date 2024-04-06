@@ -1,6 +1,8 @@
+using Application.Services;
 using Domain.Models;
 using Microsoft.Extensions.Configuration;
 using Persistence.Context;
+using Persistence.Repository;
 using WebApi.Auth;
 
 
@@ -18,8 +20,15 @@ namespace WebApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<IDapperContext, DapperContext>();
+
+            builder.Services.AddSingleton<IDapperContext, DapperContext>();
             builder.Services.AddSingleton<IUser>(provider => new LoggedUser(1, "admin", "admin@example.com", UserRole.Administrator));
+
+
+            builder.Services.AddSingleton<IUserRepository, UserRepository>();
+            builder.Services.AddSingleton<IUserAccountService, UserAccountService>();
+
+
 
             var app = builder.Build();
 

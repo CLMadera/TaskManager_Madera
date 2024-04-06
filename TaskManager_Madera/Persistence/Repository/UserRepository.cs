@@ -44,7 +44,8 @@ namespace Persistence.Repository
                     string query =
                         "INSERT INTO Users (UserId, UserName, Email, Role, CreatedAt, PasswordHash) " +
                         "VALUES ((SELECT ISNULL(MAX(UserId), 0) + 1 FROM Users), @UserName, @Email, @Role, @CreatedAt, @PasswordHash); " +
-                        "SELECT CAST(SCOPE_IDENTITY() as int) ";
+                        //"SELECT CAST(SCOPE_IDENTITY() as int) ";
+                        "SELECT ISNULL(MAX(UserId), 0) FROM Users ";
                     return dbConnection.QuerySingleOrDefault<int>(query, model);
                 }
 
