@@ -59,5 +59,15 @@ namespace Persistence.Repository
             {
                 throw new NotImplementedException();
             }
+
+            public async Task<User?> Authenticate(string userName, string password)
+            {
+            using (IDbConnection dbConnection = _dapperContext.CreateConnection())
+            {
+                var sql = "SELECT UserId, UserName, Email, Role FROM Users WHERE UserName = @UserName AND PasswordHash = @Password";
+                var user = await dbConnection.QuerySingleOrDefaultAsync<User>(sql, new { userName, password });
+                return user;
+            }
+        }
     }
 }
