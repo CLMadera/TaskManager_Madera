@@ -1,3 +1,8 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
+//using WebApi.Auth
+
 namespace Domain.Models;
 
 /// <summary>
@@ -22,10 +27,10 @@ public class TaskItem
     public IEnumerable<Comment> Comments => _comments.AsReadOnly();
 
     public TaskItem(int taskId, int? projectId, string title, string description,
-        TaskItemPriority priority, TaskItemStatus status, User assignedTo,
+        TaskItemPriority priority, TaskItemStatus status, User? assignedTo,
         User createdBy, DateTime createdAt, DateTime? dueDate,
-        User modifiedBy, DateTime? modifiedAt,
-        List<Comment> comments)
+        User? modifiedBy, DateTime? modifiedAt,
+        List<Comment>? comments)
     {
         TaskId = taskId;
         ProjectId = projectId;
@@ -40,5 +45,18 @@ public class TaskItem
         ModifiedBy = modifiedBy;
         ModifiedAt = modifiedAt;
         _comments = comments;
+    }
+
+    public static TaskItem Create(string title, string description, TaskItemPriority priority, int? projectId,
+        User? assignedTo, DateTime? dueDate)
+    {
+        if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(description))
+        {
+            throw new ValidationException();
+        }
+
+        //var loggedUser = new LoggedUser();
+        return new TaskItem(0, projectId, title, description, priority, 0, assignedTo, assignedTo, DateTime.UtcNow
+            , dueDate, null, null, null);
     }
 }
