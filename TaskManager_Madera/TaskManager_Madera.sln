@@ -5,11 +5,13 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainTests", "DomainTests\DomainTests.csproj", "{252F370D-25CC-4D6E-B21C-72DA65F7B1FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLibrary", "DataAccessLibrary\DataAccessLibrary.csproj", "{AC86B87E-69D9-43A6-A7AA-00C86AFE0BC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{AC86B87E-69D9-43A6-A7AA-00C86AFE0BC5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{75A8AC98-CA58-4257-93FD-812E69640058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{CBD47C21-E112-42FB-998C-A5EDC71E9B52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{CBD47C21-E112-42FB-998C-A5EDC71E9B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{94699988-35D3-44B8-94C6-99F506ACF3B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CBD47C21-E112-42FB-998C-A5EDC71E9B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD47C21-E112-42FB-998C-A5EDC71E9B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD47C21-E112-42FB-998C-A5EDC71E9B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94699988-35D3-44B8-94C6-99F506ACF3B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94699988-35D3-44B8-94C6-99F506ACF3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94699988-35D3-44B8-94C6-99F506ACF3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94699988-35D3-44B8-94C6-99F506ACF3B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

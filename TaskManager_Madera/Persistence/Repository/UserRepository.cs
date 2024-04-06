@@ -1,14 +1,9 @@
-﻿using DataAccessLibrary.Context;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Dapper;
 using Domain.Models;
+using Persistence.Context;
 
-namespace DataAccessLibrary.Repository
+namespace Persistence.Repository
 {
     public class UserRepository : IUserRepository
     {

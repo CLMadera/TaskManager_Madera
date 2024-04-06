@@ -1,10 +1,8 @@
-using System;
-using System.Collections.Generic;
 using System.Data;
 using Dapper;
-using DataAccessLibrary.Context;
+using Persistence.Context;
 
-namespace DataAccessLibrary.Repository
+namespace Persistence.Repository
 {
     public class GenericRepository<TModel> : IGenericRepository<TModel>     //to chyba nie jest potrzebne
     {
