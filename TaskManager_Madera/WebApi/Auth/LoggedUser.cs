@@ -1,4 +1,4 @@
-﻿using TaskManager;
+﻿using Domain.Models;
 
 namespace WebApi.Auth
 {

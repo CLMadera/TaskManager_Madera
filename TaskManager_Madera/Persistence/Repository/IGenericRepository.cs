@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-
-namespace DataAccessLibrary.Repository
+namespace Persistence.Repository
 {
     public interface IGenericRepository<TModel>
     {

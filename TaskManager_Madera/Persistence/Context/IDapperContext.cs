@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace DataAccessLibrary.Context;
+namespace Persistence.Context;
 
 public interface IDapperContext
 {

@@ -1,8 +1,8 @@
-using Microsoft.Extensions.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
-namespace DataAccessLibrary.Context
+namespace Persistence.Context
 {
     public class DapperContext : IDapperContext
     {

@@ -1,4 +1,4 @@
-namespace TaskManager;
+namespace Domain.Models;
 
 /// <summary>
 /// Interfejs segregujący model użytkownika wykorzystywany w różnych kontekstach:
