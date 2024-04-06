@@ -1,4 +1,4 @@
-namespace TaskManager;
+namespace Domain.Models;
 
 /// <summary>
 /// Model biznesowy i bazodanowy zadania.
