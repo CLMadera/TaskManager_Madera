@@ -1,7 +1,9 @@
+using Domain.Models;
+
 namespace Application.Services
 {
     public interface IUserService
     {
-        // Metody dotyczące dziedziny użytkownika
+        Task<User?> Authenticate(string userName, string password);
     }
 }
